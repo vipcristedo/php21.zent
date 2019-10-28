@@ -1,6 +1,6 @@
 <?php 
 require_once 'connection.php';
-$query = "SELECT * FROM categories WHERE ISNULL(deleted_at)";
+$query = "SELECT * FROM categories WHERE ISNULL(deleted_at) AND ISNULL(parent_id)";
 
 // Thực thi câu lệnh
 $result = $conn->query($query);
@@ -39,7 +39,14 @@ date_default_timezone_set('Asia/Ho_Chi_Minh');
             </div>
             <div class="form-group">
                 <label for="">Parent Id</label>
-                <input type="number" max="<?= count($categories)?>" min="1" class="form-control" id="" placeholder="" name="parent_id">
+                <select class="form-control" name="parent_id">
+                    <option value="NULL">Please choose parent ID</option>
+                <?php foreach ($categories as $key => $value) { ?>
+                    <option value="<?= $value['id']?>">
+                        <?= $value['name'] ?>
+                    </option>
+                <?php } ?>
+                </select>
             </div>
             <div class="form-group">
                 <label for="">Thumbnail</label>
