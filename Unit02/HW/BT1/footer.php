@@ -54,7 +54,13 @@
   <!-- Page level custom scripts -->
   <script src="js/demo/chart-area-demo.js"></script>
   <script src="js/demo/chart-pie-demo.js"></script>
-
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-bs4.min.js"></script>
+  <script>
+    $(function () {
+      // Summernote
+      $('.textarea').summernote()
+    })
+  </script>
 </body>
 
 </html>
