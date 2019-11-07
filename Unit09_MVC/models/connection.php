@@ -23,20 +23,4 @@ class Connection{
 		}
 	}
 }
-
-$connection = new Connection();
-
-$query = "SELECT * FROM posts WHERE ISNULL(deleted_at)";
-
-// Thực thi câu lệnh
-$result = $connection->conn->query($query);
-// Tạo 1 mảng để chứa dữ liệu
-$posts = array();
-
-while($row = $result->fetch_assoc()) { 
-	$posts[] = $row;
-}
-echo "<pre>";
-	print_r($posts);
-echo "</pre>";
 ?>

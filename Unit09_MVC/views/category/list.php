@@ -1,17 +1,3 @@
-<?php 
-require_once 'connection.php';
-$query = "SELECT * FROM categories WHERE ISNULL(deleted_at)";
-
-// Thực thi câu lệnh
-$result = $conn->query($query);
-// Tạo 1 mảng để chứa dữ liệu
-$categories = array();
-
-while($row = $result->fetch_assoc()) { 
-	$categories[] = $row;
-}
-
- ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,7 +33,7 @@ while($row = $result->fetch_assoc()) {
 							<?= $value["description"] ?>
 						</td>
 						<td>
-							<a href="category_detail.php?id=<?= $value['id'] ?>" class="btn btn-primary">Detail</a>
+							<a href="category_detail.php?id=<?= $value['id'] ?>" class="btn btn-primary		">Detail</a>
 							<a href="category_update.php?id=<?= $value['id'] ?>" class="btn btn-success">Update</a>
 							<a href="category_delete.php?id=<?= $value['id'] ?>" class="btn btn-warning">Delete</a>
 						</td>
