@@ -37,7 +37,7 @@
                         </td>
 
                         <td>
-                            <img src="<?= $post_mini["thumbnail"] ?>" width="100px" height="100px">
+                            <img src="public/images/<?= $post_mini["thumbnail"] ?>" width="100px" height="100px">
                             <input type="file" class="form-control" id="" placeholder="" name="thumbnail" value="<?= $post_mini["thumbnail"] ?>">
                         </td>
                     </tr>

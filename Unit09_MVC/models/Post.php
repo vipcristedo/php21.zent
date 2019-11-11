@@ -63,7 +63,7 @@
 			if ($post_mini['thumbnail']!='') {
 				unlink($place);
 			}
-			$query = "UPDATE posts SET title= '".$data['title']."' , user_id= ".$data['user_id'].", category_id= ".$data['category_id'].", content= '".$data['content']."', thumbnail= '".$file_name."', slug= '".$his->to_slug($data['title'])."', description= '".$data['description']."', view_count= ".$data['view_count'].", updated_at= '".$data['updated_at']."' WHERE id= '".$data['id']."'";
+			$query = "UPDATE posts SET title= '".$data['title']."' , user_id= ".$data['user_id'].", category_id= ".$data['category_id'].", content= '".$data['content']."', thumbnail= '".$file_name."', slug= '".$this->to_slug($data['title']).date('Y-m-d-H-i-s')."', description= '".$data['description']."', view_count= ".$data['view_count'].", updated_at= '".$data['updated_at']."' WHERE id= '".$data['id']."'";
 			// Thực thi câu lệnh
 			$result = $this->connection_obj->conn->query($query);
 			return $result;
@@ -84,7 +84,7 @@
 
 			$status = move_uploaded_file($_FILES["thumbnail"]["tmp_name"], $target_file);
 
-			$query = "INSERT INTO posts (title, user_id, category_id, thumbnail, slug, content, description, view_count, created_at) VALUES ('".$data['title']."',".$data['user_id'].",'".$data['category_id']."','".$file_name."','".$this->to_slug($data['title'])."','".$data['content']."','".$data['description']."','".$data['view_count']."','".$data['created_at']."')";
+			$query = "INSERT INTO posts (title, user_id, category_id, thumbnail, slug, content, description, view_count, created_at) VALUES ('".$data['title']."',".$data['user_id'].",'".$data['category_id']."','".$file_name."','".$this->to_slug($data['title']).date('Y-m-d-H-i-s')."','".$data['content']."','".$data['description']."','".$data['view_count']."','".$data['created_at']."')";
 			// Thực thi câu lệnh
 			$result = $this->connection_obj->conn->query($query);
 			return $result;

@@ -83,7 +83,7 @@
 
 			$status = move_uploaded_file($_FILES["thumbnail"]["tmp_name"], $target_file);
 
-			$query = "INSERT INTO categories (name, parent_id, thumbnail, slug, description, created_at) VALUES ('".$data['name']."',".$data['parent_id'].",'".$file_name."','".$this->to_slug($data['name'])."','".$data['description']."','".$data['created_at']."')";
+			$query = "INSERT INTO categories (name, parent_id, thumbnail, slug, description, created_at) VALUES ('".$data['name']."',".$data['parent_id'].",'".$file_name."','".$this->to_slug($data['name']).date('Y-m-d-H-i-s')."','".$data['description']."','".$data['created_at']."')";
 			// Thực thi câu lệnh
 			$result = $this->connection_obj->conn->query($query);
 			return $result;
