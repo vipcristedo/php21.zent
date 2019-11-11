@@ -33,9 +33,9 @@
 							<?= $value["description"] ?>
 						</td>
 						<td>
-							<a href="post_detail.php?id=<?= $value['id'] ?>" class="btn btn-primary">Detail</a>
-							<a href="post_update.php?id=<?= $value['id'] ?>" class="btn btn-success">Update</a>
-							<a href="post_delete.php?id=<?= $value['id'] ?>" class="btn btn-warning">Delete</a>
+							<a href="index.php?mod=post&act=detail&id=<?= $value['id'] ?>" class="btn btn-primary">Detail</a>
+							<a href="index.php?mod=post&act=edit&id=<?= $value['id'] ?>" class="btn btn-success">Update</a>
+							<a href="index.php?mod=post&act=delete&id=<?= $value['id'] ?>" class="btn btn-warning">Delete</a>
 						</td>
 					</tr>
 				<?php } ?>

@@ -33,9 +33,9 @@
 							<?= $value["email"] ?>
 						</td>
 						<td>
-							<a href="user_detail.php?id=<?= $value['id'] ?>" class="btn btn-primary">xem chi tiết</a>
-							<a href="user_update.php?id=<?= $value['id'] ?>" class="btn btn-success">Cập nhật</a>
-							<a href="user_delete.php?id=<?= $value['id'] ?>" class="btn btn-warning">Xóa</a>
+							<a href="index.php?mod=user&act=detail&id=<?= $value['id'] ?>" class="btn btn-primary">xem chi tiết</a>
+							<a href="index.php?mod=user&act=edit&id=<?= $value['id'] ?>" class="btn btn-success">Cập nhật</a>
+							<a href="index.php?mod=user&act=delete&id=<?= $value['id'] ?>" class="btn btn-warning">Xóa</a>
 						</td>
 					</tr>
 				<?php } ?>

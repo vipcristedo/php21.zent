@@ -11,60 +11,58 @@
 <body>
 	<div class="container">
 		<legend class="text-center"><h1>Thông tin người dùng</h1></legend>
-		<a href="users.php" class="btn btn-success">Trở lại</a>
+		<a href="index.php?mod=user&act=list" class="btn btn-success">Trở lại</a>
 		<table class="table table-bordered">
 			<tbody>
-				<?php 
-				foreach ($user_mini as $key => $value) { ?>
-					<tr>
-						<td>
-							Id
-						</td>
-						<td>
-							<?= $value["id"] ?>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							Tên
-						</td>
-						<td>
-							<?= $value["name"] ?>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							Email
-						</td>
-						<td>
-							<?= $value["email"] ?>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							Mật khẩu
-						</td>
-						<td>
-							<?= $value["password"] ?>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							Avatar
-						</td>
-						<td>
-							<img src="<?= $value["avatar"] ?>">
-						</td>
-					</tr>
-					<tr>
-						<td>
-							Ngày tạo
-						</td>
-						<td>
-							<?= $value["created_at"] ?>
-						</td>
-					</tr>
-				<?php } ?>
+				
+				<tr>
+					<td>
+						Id
+					</td>
+					<td>
+						<?= $user_mini["id"] ?>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Tên
+					</td>
+					<td>
+						<?= $user_mini["name"] ?>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Email
+					</td>
+					<td>
+						<?= $user_mini["email"] ?>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Mật khẩu
+					</td>
+					<td>
+						<?= $user_mini["password"] ?>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Avatar
+					</td>
+					<td>
+						<img src="public/images/<?= $user_mini["avatar"] ?>" width="100px" height="100px">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Ngày tạo
+					</td>
+					<td>
+						<?= $user_mini["created_at"] ?>
+					</td>
+				</tr>
 			</tbody>
 		</table>
 	</div>

@@ -4,7 +4,7 @@ require 'connection.php';
 $data = $_POST;
 $target_dir = "images/";  // thư mục chứa file upload
 
-$target_file = $target_dir.time(). basename($_FILES["thumbnail"]["name"]); // link sẽ upload file lên
+$target_file = basename($_FILES["thumbnail"]["name"]); // link sẽ upload file lên
 
 if (move_uploaded_file($_FILES["thumbnail"]["tmp_name"], $target_file)) { // nếu upload file không có lỗi 
     echo "The file ". basename( $_FILES["thumnail"]["name"]). " has been uploaded.";

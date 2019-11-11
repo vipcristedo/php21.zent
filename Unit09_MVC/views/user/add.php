@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Add new category</title>
+    <title>Thêm mới người dùng</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 
@@ -15,38 +15,33 @@
 </head>
 <body>
     <div class="container">
-    <h3 align="center">Add New Category</h3>
-    <a href="index.php?mod=category" class="btn btn-success">Back</a>
+    <h3 align="center">Thêm Mới Người Dùng</h3>
+    <a href="index.php?mod=user&act=list" class="btn btn-success">Trở lại</a>
     <hr>
-        <form action="index.php?mod=category&act=store" method="POST" role="form" enctype="multipart/form-data">
+        <form action="index.php?mod=user&act=store" method="POST" role="form" enctype="multipart/form-data">
             <div class="form-group">
-                <label for="">Name</label>
+                <label for="">Tên</label>
                 <input type="text" class="form-control" id="" placeholder="" name="name">
             </div>
             <div class="form-group">
-                <label for="">Parent Id</label>
-                <select class="form-control" name="parent_id">
-                    <option value="NULL">Please choose parent ID</option>
-                <?php foreach ($categories as $key => $value) { ?>
-                    <option value="<?= $value['id']?>">
-                        <?= $value['name'] ?>
-                    </option>
-                <?php } ?>
-                </select>
+                <label for="">email</label>
+                <input type="email" class="form-control" id="" placeholder="" name="email">
             </div>
             <div class="form-group">
-                <label for="">Thumbnail</label>
-                <input type="file" class="form-control" id="" placeholder="" name="thumbnail">
+                <label for="">mật khẩu</label>
+                <input type="password" class="form-control" id="" placeholder="" name="password">
             </div>
             <div class="form-group">
-                <label for="">Description</label>
-                <input type="text" class="form-control" id="" placeholder="" name="description">
+                <label for="">Avatar</label>
+                <input type="file" class="form-control" id="" placeholder="" name="avatar">
             </div>
             <div class="form-group">
                 <input type="hidden" class="form-control" id="" placeholder="" name="created_at" value="<?= date('Y-m-d H:i:s'); ?>">
             </div>
-            <button type="submit" class="btn btn-primary">Creat</button>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Tạo mới</button>
+            </div>
         </form>
     </div>
 </body>
-</html>
+</html>s
