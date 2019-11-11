@@ -14,7 +14,7 @@
         
         <table class="table table-bordered">
             <tbody>
-                <form action="post_update_process.php" method="POST" role="form" enctype="multipart/form-data">
+                <form action="index.php?mod=post&act=update" method="POST" role="form" enctype="multipart/form-data">
                     <tr>
                         <td>
                             Title
@@ -89,7 +89,7 @@
                     <input type="hidden" class="form-control" id="" placeholder="" name="id" value="<?= $id ?>">
                     <tr>
                         <td colspan="2">
-                            <a href="posts.php" class="btn btn-success">Back</a>
+                            <a href="index.php?mod=post&act=list" class="btn btn-success">Back</a>
                             <button type="submit" class="btn btn-primary">Update</button>
                         </td>
                     </tr>
